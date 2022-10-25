@@ -1,0 +1,213 @@
+main {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0;
+    min-height: calc(100vh - 80px);
+    background: rgb(206, 0, 178);
+    color: #ffff;
+}
+
+.calculator-form-container img {
+    width: 25%;
+    height: 20%;
+    margin-top: 3%;
+}
+    
+.calculator-form-container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 50px;
+    border-color: black;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 3);
+    width: 200px;
+    height: 300px;
+    margin-top: 2.5%;
+    margin: 50px -1000 0 auto;
+    background: rgb(206, 0, 178);
+    padding: 3em;
+    box-sizing: content-box;
+    outline: 1px;
+    outline-style: solid;
+    outline-offset: -6px;
+    outline-color: pink;
+}
+
+.calculator-form-container label {
+    font-size: large;
+    margin-top: 1em;
+}
+
+.person-items input, .calculator-form-container input {
+    outline: 1px;
+    outline-style: solid;
+    outline-offset: 2px;
+    outline-color: pink;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    border-radius: 2.5px;
+    border: none;
+}
+
+.calculator-form-container input {
+    padding: 5px;
+}
+
+.calculator-form-container .form-title {
+    margin: 0;
+    margin-left: 15px;
+}
+
+.calculator-persons-container button {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 5%;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #fff;
+    padding: 8px 20px;
+    border: 1px solid #ffff;
+    transition: all 0.3s ease-out;
+}
+
+.calculator-persons-container button:hover {
+    transition: all 0.3s ease-out;
+    background: #fff;
+    color: #5a0147;
+    transition: 250ms;
+}
+
+.calculator-form-container, .calculator-persons-container, .calculator-output-container{
+    display: flex;
+    flex-basis: 30%;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(112, 1, 97);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 3);
+    height: calc(100vh - 80px);
+    border-radius: 50px;
+    outline: 1px;
+    outline-style: solid;
+    outline-offset: -6px;
+    outline-color: pink;
+    overflow-y: auto;
+} 
+
+.calculator-output-container{
+    flex-basis: 20%;
+} 
+
+.calculator-persons-container, .calculator-output-container{
+    margin-left: 5%;
+} 
+
+.calculator-persons-container {
+    width: 50%;
+    flex-basis: 50%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.calculator-people li {
+    width: 100%;
+    float: left;
+    line-height: 22px;
+
+    padding: 14px 170px 14px 14px;
+    box-sizing: content-box;
+    font-size: large;
+    margin-top: -4.8%;
+    margin-bottom: 0.5rem;
+}
+
+.person-items {
+    margin-top: 3%;
+}
+
+.person-items label {
+    font-size: large;
+    margin-right: 2%;
+}
+
+.person-items input {
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+}
+
+.item {
+    display: flex;
+}
+
+.calculator-persons-container button {
+    display: flex;
+}
+
+.calculator-people button {
+    margin-top: 0;
+    margin-left: 30%;
+    display: flex;
+}
+
+/* add remove button */
+
+.person-label {
+    display: flex;
+    margin-top: 5%;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    height: 100%;
+    align-self: center;
+}
+
+.logo {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    margin-left: 0.5rem;
+}
+
+.logo .fill { 
+    fill: #c0cecb;
+    -webkit-transition: fill 0.2s ease;
+    -moz-transition: fill 0.2s ease;
+    -ms-transition: fill 0.2s ease;
+    -o-transition: fill 0.2s ease;
+    transition: fill 0.2s ease;
+}
+
+.logo .noFill {
+    fill: transparent;
+}
+
+.calculator-people .logo:hover .fill {
+    fill: #e86656;
+}
+
+.calculator-output-container .person-payment {
+    background: rgb(206, 0, 178);
+    box-sizing: content-box;
+    list-style: none;
+    margin-left: -20%;
+    outline: 1px;
+    padding: 25px;
+    margin-top: 5%;
+    outline-style: solid;
+    outline-offset: -6px;
+    outline-color: pink;
+}
+
+
+.calculator-output-container .person-payment:first-of-type {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.calculator-output-container .person-payment:last-of-type {
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}

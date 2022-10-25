@@ -1,0 +1,51 @@
+import React from 'react'
+import AddItem from './AddItem'
+import { ReactComponent as Remove } from '../BookmarkItems/remove_icon.svg'
+
+
+function AddPerson({
+    persons,
+    setPerson,
+    removePerson,
+    removeItem
+    }:{
+    persons: any[],
+    setPerson : (payload: any) => void,
+    removePerson : (index : number) => void,
+    removeItem : (index : number, personIndex: number) => void
+    }) {
+
+    const mappedData = persons.map((person,  i) => {
+
+    function addItem() {
+        let oldArray : number[] = person.items;
+        let newArray : number[] = [...oldArray, 0];
+        person.items = newArray;
+        setPerson({name: '', items: [], total: 0})
+    }
+    
+    return (
+        <li key={i}>
+            <div className='person-label'>
+                    {person.name ? person.name : 'Person ' + (i+1)}
+                <div className='button-container' onClick={() => removePerson(i)}>
+                        <Remove className='logo'/>
+                </div>
+            </div>
+            <ul className='person-items'>
+                <AddItem person={person} removeItem={removeItem} personIndex={i}/>
+            </ul>
+            <button onClick={() => addItem()}> Add Item </button>
+        </li>
+    )
+    })
+    
+    return(
+    <>
+        {mappedData}
+    </>
+    )
+}
+
+export default AddPerson
+

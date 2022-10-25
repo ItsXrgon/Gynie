@@ -1,0 +1,80 @@
+.signup-page {
+  background: rgb(206, 0, 178);
+  height: calc(100vh - 80px);
+  color: #fff;
+}
+
+.signup-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30%;
+  height: 81%;
+  margin-left: 30%;
+  border-radius: 50px;
+  border-color: black;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 3);
+  background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(202, 47, 166) 100%);
+  padding: 3em;
+  box-sizing: content-box;
+  outline: 8px;
+  outline-style: double;
+  outline-offset: -4px;
+  outline-color: black;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20%;
+}
+
+.signup-form label {
+  padding-top: 10%;
+  font-size: 25px;
+  padding-bottom: 2%;
+}
+
+.signup-form .signup-form-title {
+  font-size: 50px;
+  align-self: center;
+  color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin-top: 10%;
+}
+
+.signup-form input {  
+  font-size: 25px;
+  outline: 1px;
+  outline-style: solid;
+  outline-offset: 2px;
+  outline-color: pink;
+}
+
+.signup-form button {
+  cursor: pointer;
+  background-color: transparent;
+  color: #fff;
+  padding: 12px;
+  margin-top: 10%;
+  margin-left: 30%;
+  margin-right: 30%;
+  font-size: 25px;
+  border: 1px solid #ffff;
+  transition: all 0.3s ease-out;
+  outline: 1px;
+  outline-style: solid;
+  outline-offset: 0px;
+  outline-color: white;
+}
+
+.signup-form button:hover {
+  transition: all 0.3s ease-out;
+  background: #fff;
+  color: #5a0147;
+  outline: 2px;
+  outline-style: solid;
+  outline-offset: 4px;
+  outline-color: pink;
+  transition: 200ms;
+}

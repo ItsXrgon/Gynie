@@ -1,0 +1,170 @@
+main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    color: #ffff;
+    min-height: calc(150vh - 80px);
+}
+
+.add-item {
+    background: rgb(206, 0, 178);
+    margin-top: 2%;
+}
+
+.input-item {
+    height: 4rem;
+    display: flex;
+    margin-left: 1%;
+}
+
+.input-item input {
+    font-size: 25px;
+    text-indent: 20px;
+    width: 95%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+    border-radius: 25px;
+    outline: black;
+    outline-style: solid;
+    outline-width: 1px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 3); 
+    z-index: 1;
+}
+
+.add-item button {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center; 
+    top: 15%;
+    border-radius: 25px;
+    background-color:#e5a7fa;
+    border: 2px;
+    outline: black;
+    outline-style: solid;
+    outline-width: 2px;
+    cursor: pointer;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 3); 
+    z-index: 1;
+}
+
+.Add .fill {
+    fill: black;
+}
+
+.todo-list-picker {
+    height: 60px;
+    background: rgb(206, 0, 178);
+}
+
+.todo-list-picker .lists {
+    display: flex;
+    margin-top: 0;
+    height: 60px;
+    width: 100%;
+    color: #fff;
+}
+
+.todo-list-picker ul > li {
+    display: inline-block;
+    text-align: center;
+    font-size: 30px;
+    
+    background: #ae59ca;
+    border: black;
+    border-style: solid;
+    border-width: 3px;
+    height: 50px;
+    min-width: 120px;
+    width: fit-content;
+    list-style: none;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.todo-list-picker li:hover {
+    z-index: 999;
+    transform: scale(1.1);
+}
+
+.todo-list-picker button {
+    height: 50px;
+    width: 50px;
+    background: rgb(140, 255, 118);
+    border: black;
+    display: flex;
+    align-items: center; 
+    border-style: solid;
+    border-width: 3px;
+    cursor: pointer;
+}
+
+.todo-list-picker button:hover {
+    z-index: 999;
+    transform: scale(1.1);
+}
+
+.todo-list-picker::after {
+    content: '';
+    width: 95%;
+    height: 0.3em;
+    background: #000000;
+    position: absolute;
+    left: 2.5%;
+    margin-top: -1.8%;
+}
+
+.todo-list-view {
+    background: rgb(206, 0, 178);
+    min-height: calc(100vh - 80px);
+}
+
+.todo-list-view ul {
+    padding: 0;
+    margin-top: 0%;
+}
+
+.todo-list-view .todo-list-item {
+    background: #5a0147;
+    color: #fff;
+    font-size: 24px;
+    text-indent: 20%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    margin-bottom: 2%;
+    width: 90%;
+    height: 5rem;
+    align-items: flex-start;
+    justify-content: flex-end;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 3);
+    flex-shrink: 0;
+    outline: 1px;
+    outline-style: solid;
+    outline-offset: -4px;
+    outline-color: pink;
+}
+
+
+.todo-list-view .todo-list-item-buttons {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+    margin: 2px;
+}
+
+.Remove, .Subtask, .Complete {
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+}
+
+.Remove .noFill, .Subtak .noFill, .Complete .noFill {
+    fill: transparent;
+}
+
+.Remove:hover .fill {
+    fill: #e86656;
+}
