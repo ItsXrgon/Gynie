@@ -7,12 +7,14 @@ function AddPerson({
     persons,
     setPerson,
     removePerson,
-    removeItem
+    removeItem,
+    setItem
     }:{
     persons: any[],
     setPerson : (payload: any) => void,
     removePerson : (index : number) => void,
-    removeItem : (index : number, personIndex: number) => void
+    removeItem : (index : number, personIndex: number) => void,
+    setItem: (index : number, personIndex: number, itemIndex: number) => void,
     }) {
 
     const mappedData = persons.map((person,  i) => {
@@ -33,7 +35,7 @@ function AddPerson({
                 </div>
             </div>
             <ul className='person-items'>
-                <AddItem person={person} removeItem={removeItem} personIndex={i}/>
+                <AddItem person={person} removeItem={removeItem} setItem={setItem} personIndex={i}/>
             </ul>
             <button onClick={() => addItem()}> Add Item </button>
         </li>

@@ -33,6 +33,21 @@ function CheckCalculation() {
     })
   }
 
+  function setItem(item : number, personIndex : number, itemIndex: number){
+    
+    const mappedData = persons.map((person: any,  i: number) => {
+        if(i == personIndex){
+          person.items.map((item: string, i: number) => {
+            if(i == itemIndex){
+              setPersons((persons: any[]) => {
+
+              })
+            }
+          })
+        }
+    })
+  }
+
   function removeItem(itemIndex: number, personIndex: number) {
     setPersons((persons: any[]) => {
       
@@ -45,6 +60,7 @@ function CheckCalculation() {
         let personTotal = 0
         for (let i = 0; i < person.items.length; i++) {
           personTotal += person.items[i];
+          console.log(person.items[i])
         }
         personTotal =+ total*(vat/100) + total*(service/100) + tip/persons.length
         console.log(personTotal)
@@ -54,8 +70,7 @@ function CheckCalculation() {
 
   useEffect(() => {
     window.localStorage.setItem('check-people', JSON.stringify(persons))
-    calculateTotal()
-  }, [vat]);
+  }, [persons]);
 
   useEffect(() => {
     const data = window.localStorage.getItem('check-people');
@@ -91,9 +106,11 @@ function CheckCalculation() {
               persons={persons} 
               setPerson={setPerson} 
               removePerson={removePerson}
-              removeItem={removeItem} />
+              removeItem={removeItem}
+              setItem={setItem} />
             </ul>
         <button onClick={() => addPerson()}> Add Person </button>
+        <button onClick={() => calculateTotal()}> Calculate </button>
         </div>
         <div className='calculator-output-container'>
           <ul>
