@@ -13,7 +13,7 @@ function AddItem({
     setItem: (index : number, personIndex: number, itemIndex: number) => void,
     }) {
 
-    const mappedData = person.items.map((item,  i) => {
+    const mappedData = person.items.map((i) => {
     
    
     return (
@@ -26,7 +26,6 @@ function AddItem({
             <div onClick={() => removeItem(i, personIndex)}>
                 <Remove className='logo'/>
             </div>
-            
         </li>
     )
     })

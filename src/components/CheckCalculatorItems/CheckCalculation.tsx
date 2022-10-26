@@ -35,23 +35,10 @@ function CheckCalculation() {
 
   function setItem(item : number, personIndex : number, itemIndex: number){
     
-    const mappedData = persons.map((person: any,  i: number) => {
-        if(i == personIndex){
-          person.items.map((item: string, i: number) => {
-            if(i == itemIndex){
-              setPersons((persons: any[]) => {
-
-              })
-            }
-          })
-        }
-    })
   }
 
   function removeItem(itemIndex: number, personIndex: number) {
-    setPersons((persons: any[]) => {
-      
-    })
+
   }
 
   function calculateTotal() {
