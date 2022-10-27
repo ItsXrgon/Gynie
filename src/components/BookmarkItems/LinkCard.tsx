@@ -9,6 +9,14 @@ function checkLink(link : string) {
     }
 }
 
+function removeSubDirectories(link : string) {
+    link = link.replace("https://", "")
+    let pathArray: string = link.split('/')[0]
+    link = "https://" + pathArray
+
+    return link
+}
+
 const LinkCard = ({
     cards,
     removeBookmark
@@ -21,7 +29,7 @@ const LinkCard = ({
 
     return (
         <div key={i} className='link-card'>
-            <div className='link-card-image' style={{backgroundImage: `url("https://logo.clearbit.com/${checkLink(card.linkHref)}")`}}/>
+            <div className='link-card-image' style={{backgroundImage: `url("https://logo.clearbit.com/${removeSubDirectories(card.linkHref)}")`}}/>
                 <div className='link-card-link'>
                     <h2>
                         <a href={checkLink(card.linkHref)}>

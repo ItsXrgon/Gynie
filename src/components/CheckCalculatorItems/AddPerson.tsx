@@ -5,13 +5,11 @@ import { ReactComponent as Remove } from '../BookmarkItems/remove_icon.svg'
 
 function AddPerson({
     persons,
-    setPerson,
     removePerson,
     removeItem,
     setItem
     }:{
     persons: any[],
-    setPerson : (payload: any) => void,
     removePerson : (index : number) => void,
     removeItem : (index : number, personIndex: number) => void,
     setItem: (index : number, personIndex: number, itemIndex: number) => void,
@@ -22,8 +20,7 @@ function AddPerson({
     function addItem() {
         let oldArray : number[] = person.items;
         let newArray : number[] = [...oldArray, 0];
-        person.items = newArray;
-        setPerson({name: '', items: [], total: 0})
+        // setPerons something to add item to persons array
     }
     
     return (

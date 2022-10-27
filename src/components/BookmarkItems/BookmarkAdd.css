@@ -1,9 +1,8 @@
 main {
     display: flex;
     flex-direction: row;
-    margin-top: 0;
     min-height: calc(100vh - 80px);
-    color: #ffff;
+    max-height: calc(100vh - 80px);
 }
 
 .bookmark-add img {
@@ -17,7 +16,6 @@ main {
     flex-basis: 30%;
     align-items: center;
     background-color: rgb(112, 1, 97);
-    height: calc(100vh - 80px);
 }
 
 .bookmark-add form {
@@ -93,7 +91,6 @@ main {
     flex-direction: column;
     align-items: center;
     background: rgb(206, 0, 178);
-    height: calc(100vh - 80px);
     overflow-y: auto;
 }
 
@@ -144,7 +141,6 @@ main {
 
 .bookmark-view .link-card-image {
     background-size: cover;
-    background-position: center;
     background-color: aliceblue;
     min-height: 100px;
     min-width: 100px;

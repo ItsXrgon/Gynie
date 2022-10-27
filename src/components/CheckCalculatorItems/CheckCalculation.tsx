@@ -5,14 +5,7 @@ import AddPersonTotal from './AddPersonTotal'
 
 function CheckCalculation() {
 
-  const [persons, setPersons] = useState<any>([])
-
-  const [person, setPerson] = useState<{name : string; items: number[]; total: number}>({
-    name: '',
-    items: [],
-    total: 0,
-  })
-
+  const [persons, setPersons] = useState<{name : string; items: number[]; total: number}[]>([])
 
   let vat : number = 0;
   let service : number = 0;
@@ -22,9 +15,8 @@ function CheckCalculation() {
 
   function addPerson() {
     let oldArray = persons;
-    let newArray = [...oldArray, person];
+    let newArray = [...oldArray, {name: '', items: [], total: 0}];
     setPersons(newArray);
-    setPerson({name: '', items: [], total: 0})
   }
 
   function removePerson(index : number) {
@@ -91,7 +83,6 @@ function CheckCalculation() {
             <ul className='calculator-people'>
               <AddPerson 
               persons={persons} 
-              setPerson={setPerson} 
               removePerson={removePerson}
               removeItem={removeItem}
               setItem={setItem} />
