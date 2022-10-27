@@ -1,5 +1,5 @@
 import React from 'react'
-import BookmarkAdd from '../BookmarkItems/BookmarkAdd';
+import BookmarkAdd from '../Bookmarks/BookmarkAdd';
 
 function Bookmark() {
     return (

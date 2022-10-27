@@ -1,7 +1,7 @@
 import React from 'react'
-import { ReactComponent as Complete } from '../ToDoListItems/done_icon.svg'
-import { ReactComponent as Remove } from '../ToDoListItems/remove_icon.svg'
-import { ReactComponent as Subtask } from '../ToDoListItems/subtask_icon.svg'
+import { ReactComponent as Complete } from '../icons/done_icon.svg'
+import { ReactComponent as Remove } from '../icons/remove_icon.svg'
+import { ReactComponent as Subtask } from '../icons/subtask_icon.svg'
 
 const ToDoListItems = ({
     list

@@ -51,7 +51,7 @@ function Cards() {
                     <CardItem 
                     src = '/images/Gynie-home.jpg'
                     label='No sign in required'
-                    path='/CheckCalculator'
+                    path='/GradeCalculator'
                     text='Grade Calculator'/>
                     <CardItem 
                     src = '/images/Gynie-home.jpg'

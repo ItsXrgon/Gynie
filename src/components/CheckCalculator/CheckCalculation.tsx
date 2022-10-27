@@ -59,7 +59,7 @@ function CheckCalculation() {
 
   return (
     <>
-    <main>
+    <main className='check-calculator'>
         <div className='calculator-form-container'> 
           <img src='/images/Bookmark-logo.png' alt='Bookmark logo'/>
           <form>
@@ -88,7 +88,6 @@ function CheckCalculation() {
               setItem={setItem} />
             </ul>
         <button onClick={() => addPerson()}> Add Person </button>
-        <button onClick={() => calculateTotal()}> Calculate </button>
         </div>
         <div className='calculator-output-container'>
           <ul>

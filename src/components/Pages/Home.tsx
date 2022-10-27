@@ -1,6 +1,6 @@
 import React from 'react';
-import Cards from '../HomePageItems/Cards';
-import HeroSection from '../HomePageItems/HeroSection';
+import Cards from '../HomePage/Cards';
+import HeroSection from '../HomePage/HeroSection';
 
 function Home() {
     return (

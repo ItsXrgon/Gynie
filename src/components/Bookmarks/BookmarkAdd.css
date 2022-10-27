@@ -1,4 +1,4 @@
-main {
+.bookmarks {
     display: flex;
     flex-direction: row;
     min-height: calc(100vh - 80px);
@@ -184,20 +184,17 @@ main {
     margin: 5px;
 }
 
-.bookmark-view .logo .fill {
-    -webkit-transition: fill 0.2s ease;
-    -moz-transition: fill 0.2s ease;
-    -ms-transition: fill 0.2s ease;
-    -o-transition: fill 0.2s ease;
-    transition: fill 0.2s ease;
-}
-
 .bookmark-view .logo .noFill {
     fill: transparent;
 }
 
 .bookmark-view .logo .fill {
-    fill: #c0cecb
+    fill: #c0cecb;
+    -webkit-transition: fill 0.2s ease;
+    -moz-transition: fill 0.2s ease;
+    -ms-transition: fill 0.2s ease;
+    -o-transition: fill 0.2s ease;
+    transition: fill 0.2s ease;
 }
 
 .bookmark-view .logo:hover .fill {

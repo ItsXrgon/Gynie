@@ -1,7 +1,7 @@
 import React from 'react'
-import { ReactComponent as Complete } from '../BookmarkItems/remove_icon.svg'
-import { ReactComponent as Remove } from '../BookmarkItems/remove_icon.svg'
-import { ReactComponent as Subtask } from '../BookmarkItems/remove_icon.svg'
+import { ReactComponent as Complete } from '../icons/remove_icon.svg'
+import { ReactComponent as Remove } from '../icons/remove_icon.svg'
+import { ReactComponent as Subtask } from '../icons/remove_icon.svg'
 
 const ListItems = (props: { items: any[] }) => {
 

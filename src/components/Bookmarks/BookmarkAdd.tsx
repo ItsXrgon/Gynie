@@ -43,7 +43,7 @@ function BookmarkAdd() {
 
   return (
     <>
-    <main>
+    <main className='bookmarks'>
     <div className='bookmark-add'>
         <img src='/images/Bookmark-logo.png' alt='Bookmark logo'/>
         <form onSubmit={e => e.preventDefault()}>

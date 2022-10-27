@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { ReactComponent as Add } from '../ToDoListItems/add_icon.svg'
+import { ReactComponent as Add } from '../icons/add_icon.svg'
 import './ToDo.css'
 import AddListForm from './AddListForm';
 import ToDoListPicker from './ToDoListPicker';

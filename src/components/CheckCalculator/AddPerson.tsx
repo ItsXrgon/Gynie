@@ -1,6 +1,6 @@
 import React from 'react'
 import AddItem from './AddItem'
-import { ReactComponent as Remove } from '../BookmarkItems/remove_icon.svg'
+import { ReactComponent as Remove } from '../icons/remove_icon.svg'
 
 
 function AddPerson({

@@ -1,5 +1,5 @@
 import React from 'react'
-import { ReactComponent as Remove } from '../BookmarkItems/remove_icon.svg'
+import { ReactComponent as Remove } from '../icons/remove_icon.svg'
 
 function checkLink(link : string) {
     if(link.startsWith('https://')){
