@@ -3,11 +3,12 @@ main {
     flex-direction: row;
     background: rgb(206, 0, 178);
     min-height: calc(100vh - 80px);
+    margin: 0;
 }
 
 .grade-form-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-basis: 60%;
     margin-left: 20%;
     align-items: center;
@@ -20,18 +21,16 @@ main {
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 3);
 }
 
-.grade-form-container .grade-input form {
-    display: flex;
-    flex-direction: column;
-    width: 500px;
+.grade-form-container .grade-input-form form {
+    width: 350px;
     box-sizing: content-box;
+    float: left;
+    margin-left: 20%;
+    white-space: nowrap;
 }
 
-.grade-form-container h2 {
-    margin-bottom: 0;
-    border-color: black;
-    border-style: solid;
-    border-width: 2px;
+.grade-form-container h3 {
+    text-align: left;
 }
 
 .grade-form-container label {
@@ -40,13 +39,33 @@ main {
     margin-bottom: 0.3em;
 }
 
-.form-field {
-    margin-bottom: 10px;
+.field-title {
+    font-size: 24px;
+    padding: 15px;
+    text-indent: -10%;
+    text-decoration: underline;
+    margin-bottom: -3%;
+    margin-top: 15%;
 }
 
-.grade-form-container input {
+.form-field {
+    margin-bottom: 10px;
+    box-sizing: content-box;
+    padding: 15px;
+}
+
+.form-field .form-inputs {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    float: right;
+}
+
+.grades-form .form-inputs input {
     float: right;
     padding: 5px;
+    margin-right: 5px;
+    margin-left: 10px;
     border-radius: 2.5px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     outline: 1px;
@@ -63,7 +82,4 @@ main {
     justify-content: space-around;
     padding: 1.5em;
     box-sizing: content-box;
-}
-.grade-input {
-    float: left;
 }
