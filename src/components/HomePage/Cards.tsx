@@ -52,7 +52,7 @@ function Cards() {
                     src = '/images/Gynie-home.jpg'
                     label='No sign in required'
                     path='/GradeCalculator'
-                    text='Grade Calculator'/>=
+                    text='Grade Calculator'/>
                 </ul>
                 <ul className='cards__items'>                   
                     <CardItem 
@@ -69,7 +69,7 @@ function Cards() {
                     src = '/images/Gynie-home.jpg'
                     label='No sign in required'
                     path='/null'
-                    text='null'/>=
+                    text='null'/>
                 </ul>
             </div>
         </div>

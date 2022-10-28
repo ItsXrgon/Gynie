@@ -1,0 +1,139 @@
+main {
+    display: flex;
+    flex-direction: column;
+    background: rgb(206, 0, 178);
+    min-height: calc(100vh - 80px);
+    margin: 0;
+}
+
+.units-selector h1 {
+    text-indent: 25%;
+}
+
+.units-selector-container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 15%;
+    margin-right: 15%;
+    align-items: center;
+    background-color: rgb(112, 1, 97);
+    border-radius: 50px;
+    outline: 1px;
+    outline-style: solid;
+    outline-offset: -6px;
+    outline-color: pink; 
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 3);
+}
+
+.units-selector-container .units-selector {
+    margin: 15px;
+    padding: 15px;
+}
+
+.units-selector-container ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    margin-left: 10%;
+    display: flex;
+    width: 100%;
+    overflow: visible;
+}
+
+.units-selector-container .length-units .unit-list-item {
+    background-color: orangered;
+}
+
+.units-selector-container .mass-units .unit-list-item {
+    background-color: green;
+}
+
+.units-selector-container .liquid-units .unit-list-item {
+    background-color: blue;
+}
+
+.units-selector-container .temperature-units .unit-list-item {
+    background-color: red;
+}
+
+.units-selector-container .currency-units .unit-list-item {
+    background-color: darkgoldenrod;
+}
+
+.units-selector-container .time-units .unit-list-item {
+    background-color: deeppink;
+}
+
+.units-selector-container .spoon-units .unit-list-item {
+    background-color: cornflowerblue;
+}
+
+.units-selector-container li {
+    float: left;
+    display: flex;
+    width: fit-content;
+    padding: 10px;
+    height: 50px;
+    flex-direction: row;
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+    font-size: 24px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+}
+
+.units-selector-container li:hover {
+    z-index: 5;
+    transform: scale(1.2);
+    transition: 100ms;
+}
+
+.input-output-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20%;
+    margin-right: 20%;
+    align-items: center;
+    background-color: rgb(112, 1, 97);
+    border-radius: 50px;
+    outline: 1px;
+    outline-style: solid;
+    outline-offset: -6px;
+    outline-color: pink; 
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 3);
+}
+
+.input-output-container .input-container,  .input-output-container .output-container{
+    margin-top: 25px;
+}
+
+.input-output-container label {
+    margin: 15px;
+    font-size: 35px;
+}
+
+.input-output-container textarea {
+    resize: none;
+    border-radius: 15px;
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+    margin: 15px;
+    font-size: 15px;
+    outline: 1px;
+    outline-style: solid;
+    outline-offset: 3px;
+    outline-color: pink;
+    overflow-y: scroll;
+}
+
+.unit-list-item-selectedItem {
+    transform: scale(1.2);
+    background-color: white;
+    color: black;
+    pointer-events: none;
+}

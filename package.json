@@ -12,6 +12,7 @@
     "@types/node": "^18.8.0",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
+    "convert": "^4.7.0",
     "css-loader": "^6.7.1",
     "https": "^1.0.0",
     "react": "^18.2.0",
