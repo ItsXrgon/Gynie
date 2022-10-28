@@ -41,8 +41,8 @@ function Cards() {
                     <CardItem 
                     src = '/images/Gynie-home.jpg'
                     label='No sign in required'
-                    path='/CheckCalculator'
-                    text='Recipe Measurement Converters'/>
+                    path='/MeasurementsConverter'
+                    text='Measurements Converter'/>
                     <CardItem 
                     src = '/images/Gynie-home.jpg'
                     label='No sign in required'
@@ -52,12 +52,24 @@ function Cards() {
                     src = '/images/Gynie-home.jpg'
                     label='No sign in required'
                     path='/GradeCalculator'
-                    text='Grade Calculator'/>
+                    text='Grade Calculator'/>=
+                </ul>
+                <ul className='cards__items'>                   
                     <CardItem 
                     src = '/images/Gynie-home.jpg'
                     label='No sign in required'
-                    path='/CheckCalculator'
+                    path='/null'
                     text='null'/>
+                    <CardItem 
+                    src = '/images/Gynie-home.jpg'
+                    label='No sign in required'
+                    path='/null'
+                    text='null'/>
+                    <CardItem 
+                    src = '/images/Gynie-home.jpg'
+                    label='No sign in required'
+                    path='/null'
+                    text='null'/>=
                 </ul>
             </div>
         </div>

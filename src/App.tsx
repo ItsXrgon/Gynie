@@ -11,6 +11,7 @@ import ToDoList from './components/Pages/ToDoList';
 import Bookmark from './components/Pages/Bookmark';
 import Notes from './components/Pages/Notes';
 import GradeCalculator from './components/Pages/GradeCalculator';
+import MeasurementsConverter from './components/Pages/MeasurementsConverter';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/Notes" element={<Notes />} />
           <Route path="/CheckCalculator" element={<CheckCalculator />} />
           <Route path="/GradeCalculator" element={<GradeCalculator />} />
+          <Route path="/MeasurementsConverter" element={<MeasurementsConverter />} />
           <Route path="/SignUp" element={<SignUp />} />
         </Routes>
         <Footer />
