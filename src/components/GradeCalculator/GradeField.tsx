@@ -15,9 +15,9 @@ function GradeField({
             {fieldName}
         </label>
         <div className='form-inputs'>
-            <input placeholder='Your Grade' type='number' onChange={(e) => setGrade(id, 0, parseInt(e.currentTarget.value))}/>
-            <input placeholder='Max Grade' type='number' onChange={(e) => setGrade(id, 1, parseInt(e.currentTarget.value))}/>
-            <input placeholder='% of Course Grade' type='number' onChange={(e) => setGrade(id, 2, parseInt(e.currentTarget.value))}/>
+            <input placeholder='Your Grade' type='number' onChange={(e) => setGrade(id, 0, parseFloat(e.currentTarget.value))}/>
+            <input placeholder='Max Grade' type='number' onChange={(e) => setGrade(id, 1, parseFloat(e.currentTarget.value))}/>
+            <input placeholder='% of Course Grade' type='number' onChange={(e) => setGrade(id, 2, parseFloat(e.currentTarget.value))}/>
         </div>    
     </div>
   )

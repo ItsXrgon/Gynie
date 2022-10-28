@@ -45,18 +45,12 @@ function GradeCalculation() {
       }))
   }
 
-  useEffect(() => {
-    console.log(grades.length)
-  }, [])
-
-
   function calculateFinalGrade(grades : {yourGrade: number, maxGrade: number, percentage: number }[]) {
      let tempFinalGrade = 0;
      for(let i=0;i<grades.length;i++){
         if(grades[i].yourGrade != 0 && grades[i].maxGrade != 0 && grades[i].percentage != 0){
           tempFinalGrade += (grades[i].yourGrade/grades[i].maxGrade)*(grades[i].percentage)
         }
-        console.log(finalGrade)
      }
      setFinalGrade(tempFinalGrade);
   }
