@@ -5,33 +5,60 @@ import GradeField from './GradeField'
 
 function GradeCalculation() {
 
-  let grades : {yourGrade: number, maxGrade: number, percentage: number }[] = [];
+  const [grades, setGrades] = useState<{yourGrade: number, maxGrade: number, percentage: number }[]>([
+    {yourGrade: 0, maxGrade: 0, percentage: 0 },
+    {yourGrade: 0, maxGrade: 0, percentage: 0 },
+    {yourGrade: 0, maxGrade: 0, percentage: 0 },
+    {yourGrade: 0, maxGrade: 0, percentage: 0 },
+    {yourGrade: 0, maxGrade: 0, percentage: 0 },
+    {yourGrade: 0, maxGrade: 0, percentage: 0 },
+    {yourGrade: 0, maxGrade: 0, percentage: 0 },
+    {yourGrade: 0, maxGrade: 0, percentage: 0 },
+    {yourGrade: 0, maxGrade: 0, percentage: 0 },
+    {yourGrade: 0, maxGrade: 0, percentage: 0 },
+    {yourGrade: 0, maxGrade: 0, percentage: 0 },
+    {yourGrade: 0, maxGrade: 0, percentage: 0 },
+    {yourGrade: 0, maxGrade: 0, percentage: 0 },
+    {yourGrade: 0, maxGrade: 0, percentage: 0 },
+    {yourGrade: 0, maxGrade: 0, percentage: 0 },
+    {yourGrade: 0, maxGrade: 0, percentage: 0 },
+    {yourGrade: 0, maxGrade: 0, percentage: 0 },
+  ])
+
+  const [finalGrade, setFinalGrade] = useState(0)
 
   function setGrade(id: number, field: number, value: number){
-      let grade: {yourGrade: number, maxGrade: number, percentage: number } =  grades[id]
-      switch (field) {
-        case 0:
-          grade.yourGrade = value;
-          break;
-        case 1:
-          grade.maxGrade = value;
-          break;
-        case 2:
-          grade.percentage = value;
-          break;
-        default:
-          break;
-      }
+    setGrades((grades: any[]) =>
+      grades.map((grade, i) => {
+            if(i == id){
+              switch (field) {
+                case (0):
+                  return {...grade, yourGrade: value}
+                case (1):
+                  return {...grade, maxGrade: value}
+                case (2):
+                  return {...grade, percentage: value}
+              }
+            } else {
+              return grade
+            }
+      }))
   }
 
-  let finalGrade: number = 0;
+  useEffect(() => {
+    console.log(grades.length)
+  }, [])
+
 
   function calculateFinalGrade(grades : {yourGrade: number, maxGrade: number, percentage: number }[]) {
-     finalGrade = 0;
+     let tempFinalGrade = 0;
      for(let i=0;i<grades.length;i++){
-        finalGrade += (grades[i].yourGrade/grades[i].maxGrade)*(grades[i].percentage/100)
+        if(grades[i].yourGrade != 0 && grades[i].maxGrade != 0 && grades[i].percentage != 0){
+          tempFinalGrade += (grades[i].yourGrade/grades[i].maxGrade)*(grades[i].percentage)
+        }
         console.log(finalGrade)
      }
+     setFinalGrade(tempFinalGrade);
   }
 
   useEffect(() => {
@@ -45,12 +72,12 @@ function GradeCalculation() {
   return (
     <>
       <main>
+        <div className='grade-form-container'>
             <div className='form-output'>
                 <h1>
-                  {finalGrade}
+                  {finalGrade} %
                 </h1>
             </div>
-        <div className='grade-form-container'>
             <div className='grade-input-form'>
                 <form className='grades-form'>
                   <div className='coursework'>
