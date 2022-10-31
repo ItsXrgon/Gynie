@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import './MeasuremenetsConvertion.css'
 import UnitListItem from './UnitListItem';
-import convert from 'convert';
 
 function MeasuremenetsConvertion() {
+
+    const convertText = require('js-unit-converter');
+    console.log(convertText)
 
     const [selectedLength, setSelectedLength] = useState("")
     const [selectedMass, setSelectedMass] = useState("")
@@ -18,7 +20,6 @@ function MeasuremenetsConvertion() {
 
     function convertMeasurements() {
         const words: string[] = inputText.split(' ')
-        console.log(words)
         setOutputText(inputText);
     }
 
