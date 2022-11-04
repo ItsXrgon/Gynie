@@ -14,15 +14,16 @@ function AddListForm({
     setNewList : ( newList: { listName: string; listDescription: string; todoItems: string[]; completedItems: string[] }) => void,
     dispatchListSet : (payload: any) => void,
     setaddListForm : (payload: boolean) => void,
-    setCurrentList : ( newList: { listName: string; listDescription: string; todoItems: string[]; completedItems: string[] }) => void,
+    setCurrentList : (listItems : {todoItems: string[], completedItems: string[]}) => void,
   }) {
 
   function onSubmit(listName : string) {
     if (listName != "" && lists.length <= 6) {
       dispatchListSet(newList);
       setaddListForm(false);
-      setCurrentList(lists[lists.length-1])
-      //localStorage.setItem('ToDoLists', JSON.stringify(Lists))
+      let listItems = {todoItems: lists[lists.length-1].todoItems, completedItems: lists[lists.length-1].completedItems}
+      setCurrentList(listItems)
+      localStorage.setItem('ToDoLists', JSON.stringify(lists))
     }
   };
 

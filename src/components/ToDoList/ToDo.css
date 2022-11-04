@@ -84,7 +84,7 @@ main {
 }
 
 .todo-list-picker li:hover {
-    z-index: 999;
+    z-index: 2;
     transform: scale(1.1);
 }
 
@@ -101,7 +101,7 @@ main {
 }
 
 .todo-list-picker button:hover {
-    z-index: 999;
+    z-index: 2;
     transform: scale(1.1);
 }
 

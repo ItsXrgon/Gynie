@@ -9,12 +9,11 @@ const ToDoListItems = ({
     list: string[]
     }) => {
 
-    console.log(list)
     const mappedData = list.map((listItem,  i) => {
 
     return (
         <li key={i} className='todo-list-item'>
-            aaaaaa {listItem}
+            {listItem}
             <div className='todo-list-item-buttons'>
               <div className='button-container'>
                   <Complete className='Complete' />

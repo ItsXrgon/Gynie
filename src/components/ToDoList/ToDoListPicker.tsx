@@ -5,13 +5,15 @@ const ToDoListPicker = ({
     setCurrentList
     } : {
     lists : { listName: string; listDescription: string; todoItems: string[]; completedItems: string[] }[],
-    setCurrentList : ( newList: { listName: string; listDescription: string; todoItems: string[]; completedItems: string[] }) => void
+    setCurrentList : (listItems : {todoItems: string[], completedItems: string[]}) => void
     }) => {
 
     const mappedData = lists.map((list,  i) => {
 
+    let listItems = {todoItems: list.todoItems, completedItems: list.completedItems}
+    
     return (
-        <li key={i} className='link-card' title={list.listDescription} onClick={() => setCurrentList(list)}>
+        <li key={i} className='link-card' title={list.listDescription} onClick={() => setCurrentList(listItems)}>
             {list.listName}
         </li>
     )

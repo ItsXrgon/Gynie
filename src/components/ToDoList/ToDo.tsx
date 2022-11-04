@@ -7,53 +7,45 @@ import ToDoListItems from './ToDoListItems';
 
 function ToDo() {
 
-  const [addListForm, setaddListForm] = useState(false);
+  // Add list form rendered or not
+  const [addListForm, setaddListForm] = useState(false); 
 
-  function openAddList() {
-    setaddListForm(current => !current);
-  }
-
+   // Array of all different lists
   const [lists, setLists] = useState<{ listName: string; listDescription: string; todoItems: string[]; completedItems: string[]}[]>([])
 
+  // 
   const [newList, setNewList] = useState<{
       listName: string;
       listDescription: string;
-      todoItems: string[];
-      completedItems: string[];
     }>({
       listName: '',
       listDescription: '',
+  })
+
+  // Current list to be shown
+  const [currentList, setCurrentList] = useState<{
+      todoItems: string[];
+      completedItems: string[];
+    }>({
       todoItems: [],
       completedItems: []
   })
-
-  const [currentList, setCurrentList] = useState<{
-      listName: string;
-      listDescription: string;
-      todoItems: string[];
-      completedItems: string[];
-    }>({
-      listName: '',
-      listDescription: '',
-      todoItems: [""],
-      completedItems: []
-  })
-
-  function addItem() {
-    setaddListForm(current => !current);
-  }
-
+  
+  // Add new list to lists array
   const dispatchListSet = (payload: any) => {
     let oldArray = lists;
-    let newArray = [...oldArray, payload];
+    let newList = { listName: payload.listName, listDescription: payload.listDescription, todoItems: [""], completedItems: [""]}
+    let newArray = [...oldArray, newList];
     setLists(newArray);
-    setNewList({listName: '', listDescription: '', todoItems: [], completedItems: []} )
+    setNewList({listName: '', listDescription: ''})
   }
 
+  // Store new data of lists after its been changed
   useEffect(() => {
     window.localStorage.setItem('lists', JSON.stringify(lists))
   }, [lists]);
 
+  // Load lists data
   useEffect(() => {
     const data = window.localStorage.getItem('lists');
     if ( data !== null ) setLists(JSON.parse(data));
@@ -65,7 +57,7 @@ function ToDo() {
       <div className='add-item'>
         <div className='input-item'>
           <input type="text" placeholder="Enter an activity..." id="item" />   
-            <button className='add-task' title="Add Task" onClick={addItem}>
+            <button className='add-task' title="Add Task" onClick={() => setaddListForm(current => !current)}>
               <Add className='Add'/>
             </button>
         </div>
@@ -74,7 +66,7 @@ function ToDo() {
         <div className='list'>
            <ul className='lists'>
              <ToDoListPicker lists={lists} setCurrentList={setCurrentList}/>
-             <button title='Add ToDo List' onClick={openAddList}>
+             <button title='Add ToDo List' onClick={() => setaddListForm(current => !current)}>
                 <Add className='Add'/>
              </button>
            </ul>
@@ -83,16 +75,19 @@ function ToDo() {
       <div className='todo-list-view'>
         {addListForm && 
         <AddListForm 
-        newList={newList} 
-        lists={lists} 
-        setNewList={setNewList} 
-        dispatchListSet={dispatchListSet} 
-        setaddListForm={setaddListForm}
-        setCurrentList={setCurrentList}
+          newList={newList} 
+          lists={lists} 
+          setNewList={setNewList} 
+          dispatchListSet={dispatchListSet} 
+          setaddListForm={setaddListForm}
+          setCurrentList={setCurrentList}
         /> }
         <ul>
           <ToDoListItems list={currentList.todoItems} />
         </ul>
+        <div>
+          Completed:
+        </div>
         <ul>
           <ToDoListItems list={currentList.completedItems} />
         </ul>
