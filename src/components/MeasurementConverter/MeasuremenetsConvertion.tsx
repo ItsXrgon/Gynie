@@ -18,13 +18,8 @@ function MeasuremenetsConvertion() {
     const [inputText, setInputText] = useState("")
     const [outputText, setOutputText] = useState("")
 
-    function convertMeasurements() {
-        const words: string[] = inputText.split(' ')
-        setOutputText(inputText);
-    }
-
     useEffect(() => {
-        const timer = setTimeout(() => convertMeasurements(), 500) // this is the debounce time, 500 ms
+        const timer = setTimeout(() => setOutputText(convertText(inputText)), 500) // this is the debounce time, 500 ms
     
         return () => {
           clearTimeout(timer)
