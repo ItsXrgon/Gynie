@@ -13,7 +13,9 @@ const ToDoListItems = ({
 
     return (
         <li key={i} className='todo-list-item'>
-            {listItem}
+            <div className='todo-list-item-text'>
+                {listItem}
+            </div>
             <div className='todo-list-item-buttons'>
               <div className='button-container'>
                   <Complete className='Complete' />

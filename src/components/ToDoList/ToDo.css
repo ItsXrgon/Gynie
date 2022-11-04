@@ -129,7 +129,6 @@ main {
     background: #5a0147;
     color: #fff;
     font-size: 24px;
-    text-indent: 20%;
     display: flex;
     flex-direction: column;
     margin-left: 5%;
@@ -147,6 +146,10 @@ main {
     outline-color: pink;
 }
 
+.todo-list-item-text {
+    width: 100%;
+    text-indent: 2%;
+}
 
 .todo-list-view .todo-list-item-buttons {
     display: flex;

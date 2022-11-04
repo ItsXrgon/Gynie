@@ -39,8 +39,8 @@ function AddListForm({
               List title:
             </label>
             <input 
-            className='input-username'
-             placeholder=''
+              className='input-username'
+              placeholder=''
               type='text' 
               value={newList.listName}
               maxLength={18}

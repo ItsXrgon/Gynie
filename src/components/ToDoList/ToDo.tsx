@@ -13,7 +13,26 @@ function ToDo() {
    // Array of all different lists
   const [lists, setLists] = useState<{ listName: string; listDescription: string; todoItems: string[]; completedItems: string[]}[]>([])
 
-  // 
+  const [newItem, setNewItem] = useState("")
+ 
+  function addListItem(item: string) {
+    setNewItem("")
+    let oldArray = currentList.todoItems;
+    let newArray = [...oldArray, item];
+    setCurrentList({todoItems: newArray, completedItems: currentList.completedItems})
+  }
+
+  function deleteTodoListItem(index: number) {
+    let newArray = currentList.todoItems.filter((_item: any, i) => i !== index)
+    setCurrentList({todoItems: newArray, completedItems: currentList.completedItems})
+  }
+
+  function deleteCompletedListItem(index: number) {
+    let newArray = currentList.completedItems.filter((_item: any, i) => i !== index)
+    setCurrentList({todoItems: currentList.todoItems, completedItems: newArray})
+  }
+
+  // New list to be added using form
   const [newList, setNewList] = useState<{
       listName: string;
       listDescription: string;
@@ -34,7 +53,7 @@ function ToDo() {
   // Add new list to lists array
   const dispatchListSet = (payload: any) => {
     let oldArray = lists;
-    let newList = { listName: payload.listName, listDescription: payload.listDescription, todoItems: [""], completedItems: [""]}
+    let newList = { listName: payload.listName, listDescription: payload.listDescription, todoItems: ["Add items to list"], completedItems: ["Create list"]}
     let newArray = [...oldArray, newList];
     setLists(newArray);
     setNewList({listName: '', listDescription: ''})
@@ -56,8 +75,8 @@ function ToDo() {
     <main>
       <div className='add-item'>
         <div className='input-item'>
-          <input type="text" placeholder="Enter an activity..." id="item" />   
-            <button className='add-task' title="Add Task" onClick={() => setaddListForm(current => !current)}>
+          <input type="text" placeholder="Enter an activity..." id="item" value={newItem} onChange={(e) => setNewItem(e.currentTarget.value)}/>   
+            <button className='add-task' title="Add Task" onClick={() => addListItem(newItem)}>
               <Add className='Add'/>
             </button>
         </div>
@@ -85,8 +104,8 @@ function ToDo() {
         <ul>
           <ToDoListItems list={currentList.todoItems} />
         </ul>
-        <div>
-          Completed:
+        <div className='completed-items-separator'>
+          {currentList.completedItems != null ? "Completed:" : ""}
         </div>
         <ul>
           <ToDoListItems list={currentList.completedItems} />
