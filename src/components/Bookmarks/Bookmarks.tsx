@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import './BookmarkAdd.css'
+import './Bookmarks.css'
 import LinkCard from './LinkCard'
 
 function BookmarkAdd() {

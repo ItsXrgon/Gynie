@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { ReactComponent as Add } from '../icons/add_icon.svg'
-import './ToDo.css'
+import './ToDoList.css'
 import AddListForm from './AddListForm';
 import ToDoListPicker from './ToDoListPicker';
 import ToDoListItems from './ToDoListItems';
@@ -20,6 +20,10 @@ function ToDo() {
     let oldArray = currentList.todoItems;
     let newArray = [...oldArray, item];
     setCurrentList({todoItems: newArray, completedItems: currentList.completedItems})
+  }
+
+  function setCompleted(index: number) {
+    
   }
 
   function deleteTodoListItem(index: number) {

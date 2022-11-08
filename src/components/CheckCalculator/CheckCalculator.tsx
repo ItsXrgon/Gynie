@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import './CheckCalculation.css'
+import './CheckCalculator.css'
 import AddPerson from './AddPerson'
 import AddPersonTotal from './AddPersonTotal'
 

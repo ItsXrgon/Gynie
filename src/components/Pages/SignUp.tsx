@@ -1,5 +1,5 @@
 import React from 'react'
-import Form from '../SignUp/signUpForm';
+import Form from '../SignUp/signUp';
 
 function SignUp() {
     return(

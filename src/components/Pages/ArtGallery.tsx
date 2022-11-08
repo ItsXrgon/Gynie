@@ -1,10 +1,10 @@
 import React from 'react'
-import BookmarkAdd from '../Bookmarks/Bookmarks';
+import ArtGallery from '../ArtGallery/ArtGallery';
 
 function Bookmark() {
     return (
     <>
-        <BookmarkAdd/>
+        <ArtGallery />
     </>
   )
 }

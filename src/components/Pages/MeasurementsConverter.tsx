@@ -1,5 +1,5 @@
 import React from 'react'
-import MeasuremenetsConvertion from '../MeasurementConverter/MeasuremenetsConvertion'
+import MeasuremenetsConvertion from '../MeasurementConverter/MeasuremenetsConvertor'
 
 function MeasurementsConverter() {
   return (

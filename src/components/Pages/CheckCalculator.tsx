@@ -1,5 +1,5 @@
 import React from 'react'
-import CheckCalculation from '../CheckCalculator/CheckCalculation';
+import CheckCalculation from '../CheckCalculator/CheckCalculator';
 
 function CheckCalculator() {
     return (

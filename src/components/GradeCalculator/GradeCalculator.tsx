@@ -1,6 +1,6 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
-import './GradeCalculation.css'
+import './GradeCalculator.css'
 import GradeField from './GradeField'
 
 function GradeCalculation() {
