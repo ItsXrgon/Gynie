@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/Gynie/static/css/main.f7409607.css",
+    "main.js": "/Gynie/static/js/main.83ab8009.js",
+    "static/media/Gynie-home.jpg": "/Gynie/static/media/Gynie-home.c19ed5fc06d3369b7ae2.jpg",
+    "static/media/subtask_icon.svg": "/Gynie/static/media/subtask_icon.5f3313306dc7545dc80dc4cb07ffdf7b.svg",
+    "static/media/remove_icon.svg": "/Gynie/static/media/remove_icon.f8e146572b53f6fca2beb59e3fb00020.svg",
+    "index.html": "/Gynie/index.html",
+    "static/media/done_icon.svg": "/Gynie/static/media/done_icon.afa2677166525f988d01209f039a62f8.svg",
+    "static/media/add_icon.svg": "/Gynie/static/media/add_icon.796232de5e3251a917dd7fb9c44ed5ee.svg",
+    "main.f7409607.css.map": "/Gynie/static/css/main.f7409607.css.map",
+    "main.83ab8009.js.map": "/Gynie/static/js/main.83ab8009.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f7409607.css",
+    "static/js/main.83ab8009.js"
+  ]
+}

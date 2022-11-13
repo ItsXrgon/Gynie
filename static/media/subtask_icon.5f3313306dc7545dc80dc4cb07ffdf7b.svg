@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 300 300" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" style="background-color:transparent">
+   <g transform="translate(0-.000202)">
+      <rect width="203.414" height="17.7809" rx="8.89" ry="8.89" transform="translate(52.7027 41.1095)" class="fill" stroke-width="0"/>
+      <rect width="203.414" height="17.7809" rx="8.89" ry="8.89" transform="translate(52.7027 241.11)" class="fill" stroke-width="0"/>
+      <rect width="17.7809" height="211.238" rx="8" ry="8" transform="translate(238.336 42.2475)" class="fill" stroke-width="0"/>
+      <rect width="17.7809" height="211.238" rx="8.89" ry="8.89" transform="translate(52.1882 42.2475)" class="fill" stroke-width="0"/>
+      <rect width="146.631" height="7.71742" rx="3.86" ry="3.86" transform="translate(81.0942 86.141642)" class="fill" stroke-width="0"/>
+      <rect width="146.631" height="7.71742" rx="3.86" ry="3.86" transform="translate(81.0942 126.141342)" class="fill" stroke-width="0"/>
+      <rect width="146.631" height="7.71742" rx="3.86" ry="3.86" transform="translate(81.0942 166.141342)" class="fill" stroke-width="0"/>
+      <rect width="146.631" height="7.71742" rx="3.86" ry="3.86" transform="translate(81.0942 206.141342)" class="fill" stroke-width="0"/>
+   </g>
+</svg>
