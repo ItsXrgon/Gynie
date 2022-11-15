@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Bookmarks.css'
 import LinkCard from './LinkCard'
+import BookmarksLogo from '../icons/Bookmark-logo.png'
 
 function BookmarkAdd() {
     
@@ -45,7 +46,7 @@ function BookmarkAdd() {
     <>
     <main className='bookmarks'>
     <div className='bookmark-add'>
-        <img src='/images/Bookmark-logo.png' alt='Bookmark logo'/>
+        <img src={BookmarksLogo} alt='Bookmark logo'/>
         <form onSubmit={e => e.preventDefault()}>
             <h2 className='form-title'>
                 Add Bookmark

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './CheckCalculator.css'
 import AddPerson from './AddPerson'
 import AddPersonTotal from './AddPersonTotal'
+import CheckLogo from '../icons/Bookmark-logo.png'
 
 function CheckCalculation() {
 
@@ -61,7 +62,7 @@ function CheckCalculation() {
     <>
     <main className='check-calculator'>
         <div className='calculator-form-container'> 
-          <img src='/images/Bookmark-logo.png' alt='Bookmark logo'/>
+          <img src={CheckLogo} alt='Bookmark logo'/>
           <form>
             <h2 className='form-title'>
                 Check Calculator
