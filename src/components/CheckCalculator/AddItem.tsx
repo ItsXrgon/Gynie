@@ -5,13 +5,15 @@ function AddItem({
     person,
     removeItem,
     personIndex,
-    setItem
     }:{
     person: {name: string; items: number[]; total: number; },
     removeItem: (index : number, personIndex: number) => void,
     personIndex: number,
-    setItem: (index : number, personIndex: number, itemIndex: number) => void,
     }) {
+
+    function setItem(value: number, personIndex: number, itemIndex: number) {
+
+    }
 
     const mappedData = person.items.map((i) => {
     

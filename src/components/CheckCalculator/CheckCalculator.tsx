@@ -6,7 +6,7 @@ import CheckLogo from '../icons/Bookmark-logo.png'
 
 function CheckCalculation() {
 
-  const [persons, setPersons] = useState<{name : string; items: number[]; total: number}[]>([])
+  const [persons, setPersons] = useState<{items: number[]}[]>([])
 
   let vat : number = 0;
   let service : number = 0;
@@ -15,8 +15,7 @@ function CheckCalculation() {
   
 
   function addPerson() {
-    let oldArray = persons;
-    let newArray = [...oldArray, {name: '', items: [], total: 0}];
+    let newArray = [...persons, {items: [0]}];
     setPersons(newArray);
   }
 
@@ -26,24 +25,14 @@ function CheckCalculation() {
     })
   }
 
-  function setItem(item : number, personIndex : number, itemIndex: number){
-    
-  }
-
-
-  function calculateTotal() {
-    setPersons((persons: any[]) =>
-      persons.map((person) => { 
-        let personTotal = 0
-        for (let i = 0; i < person.items.length; i++) {
-          personTotal += person.items[i];
-          console.log(person.items[i])
-        }
-        personTotal =+ total*(vat/100) + total*(service/100) + tip/persons.length
-        console.log(personTotal)
-        return {...person, total: personTotal}
-      })
-  )}
+  function calculateTotal(personIndex: number) {
+    let total = 0
+    persons[personIndex].items.map((item: number) => {
+        total += item + (item*service) + (item*vat)
+    })
+    total += tip/persons.length
+    return total
+}
 
   useEffect(() => {
     window.localStorage.setItem('check-people', JSON.stringify(persons))
@@ -82,14 +71,13 @@ function CheckCalculation() {
               <AddPerson 
               persons={persons} 
               removePerson={removePerson}
-              setItem={setItem} 
               setPersons={setPersons} />
             </ul>
         <button onClick={() => addPerson()}> Add Person </button>
         </div>
         <div className='calculator-output-container'>
           <ul>
-            <AddPersonTotal persons={persons} />
+            <AddPersonTotal persons={persons} calculateTotal={calculateTotal} />
           </ul>
         </div>
     </main>

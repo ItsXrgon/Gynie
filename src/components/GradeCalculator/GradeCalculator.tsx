@@ -23,6 +23,10 @@ function GradeCalculation() {
     {yourGrade: 0, maxGrade: 0, percentage: 0 },
     {yourGrade: 0, maxGrade: 0, percentage: 0 },
     {yourGrade: 0, maxGrade: 0, percentage: 0 },
+    {yourGrade: 0, maxGrade: 0, percentage: 0 },
+    {yourGrade: 0, maxGrade: 0, percentage: 0 },
+    {yourGrade: 0, maxGrade: 0, percentage: 0 },
+    {yourGrade: 0, maxGrade: 0, percentage: 0 },
   ])
 
   const [finalGrade, setFinalGrade] = useState(0)
@@ -116,6 +120,15 @@ function GradeCalculation() {
                     </div>
                     <GradeField fieldName={'Midterm:'} id={15} setGrade={setGrade}/>
                     <GradeField fieldName={'Final:'} id={16} setGrade={setGrade}/>
+                  </div>
+                  <div className='exams'>
+                    <div className='field-title'>
+                      Extra grade fields
+                    </div>
+                    <GradeField fieldName={'Extra 1:'} id={17} setGrade={setGrade}/>
+                    <GradeField fieldName={'Extra 2:'} id={18} setGrade={setGrade}/>
+                    <GradeField fieldName={'Extra 3:'} id={19} setGrade={setGrade}/>
+                    <GradeField fieldName={'Extra 4:'} id={20} setGrade={setGrade}/>
                   </div>
                 </form>
             </div>

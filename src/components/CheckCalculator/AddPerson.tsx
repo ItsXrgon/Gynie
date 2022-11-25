@@ -6,46 +6,36 @@ import { ReactComponent as Remove } from '../icons/remove_icon.svg'
 function AddPerson({
     persons,
     removePerson,
-    setItem,
     setPersons
     }:{
     persons: any[],
     removePerson : (index : number) => void,
-    setItem: (index : number, personIndex: number, itemIndex: number) => void,
-    setPersons: (persons: {name : string; items: number[]; total: number}[]) => void
+    setPersons: (persons: {items: number[]}[]) => void
     }) {
 
-    const mappedData = persons.map((person,  i) => {
-
     function addItem(index: number) {
-        persons.map((person,  i) => {
-            if(i == index) {
-                let oldArray : number[] = person.items;
-                let newItems : number[] = [...oldArray, 0];
-                let newPersons: {name : string; items: number[]; total: number}[] = persons;
-                newPersons[index].items = newItems;
-                setPersons(newPersons)          
-            }
-        })  
-        setPersons(persons)  
+        let person = persons[index]
+        let newPersons : {items: number[]}[] = persons
+        newPersons[index] = {items: [...person.items, 0]}
+        setPersons(newPersons)
     }
 
-    
-  function removeItem(itemIndex: number, personIndex: number) {
+    function removeItem(itemIndex: number, personIndex: number) {
         persons.map((person,  i) => {
             if(i == personIndex) {
-                person.items.map((item: any, j: number) => {
-                    if(j == itemIndex ) {
+                person.items.map((item: number, j: number) => {
+                    if(j == itemIndex) {
                         let newItems = person.items.filter((_item: any, i: any) => i !== j)
-                        let newPersons: {name : string; items: number[]; total: number}[] = persons;
+                        let newPersons: {items: number[]}[] = persons;
                         newPersons[personIndex].items = newItems;
                         setPersons(newPersons) 
                     }
                 })        
             }  
         })  
-        setPersons(persons)  
     }
+
+    const mappedData = persons.map((person,  i) => {
     
     return (
         <li key={i}>
@@ -56,7 +46,7 @@ function AddPerson({
                 </div>
             </div>
             <ul className='person-items'>
-                <AddItem person={person} removeItem={removeItem} setItem={setItem} personIndex={i}/>
+                <AddItem person={person} removeItem={removeItem} personIndex={i}/>
             </ul>
             <button onClick={() => addItem(i)}> Add Item </button>
         </li>

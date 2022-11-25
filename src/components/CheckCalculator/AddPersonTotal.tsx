@@ -2,15 +2,17 @@ import React from 'react'
 
 function AddPersonTotal({ 
     persons,
+    calculateTotal
     }:{
     persons: any[],
+    calculateTotal: (personIndex: number) => number
     }) {
 
     const mappedData = persons.map((person,  i) => {
 
     return (
         <li key={i} className='person-payment'>
-            {person.name ? person.name : 'Person '+ (i+1)} Total : {person.total}
+            {'Person '+ (i+1)} Total : {calculateTotal(i)}
         </li>
     )
     })
