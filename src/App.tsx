@@ -12,6 +12,7 @@ import Bookmark from './components/Pages/Bookmark';
 import Notes from './components/Pages/Notes';
 import GradeCalculator from './components/Pages/GradeCalculator';
 import MeasurementsConverter from './components/Pages/MeasurementsConverter';
+import ArtGallery from './components/ArtGallery/ArtGallery';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/Notes" element={<Notes />} />
           <Route path="/CheckCalculator" element={<CheckCalculator />} />
           <Route path="/GradeCalculator" element={<GradeCalculator />} />
+          <Route path="/ArtGallery" element={<ArtGallery />} />
           <Route path="/MeasurementsConverter" element={<MeasurementsConverter />} />
           <Route path="/SignUp" element={<SignUp />} />
         </Routes>

@@ -30,9 +30,6 @@ function CheckCalculation() {
     
   }
 
-  function removeItem(itemIndex: number, personIndex: number) {
-
-  }
 
   function calculateTotal() {
     setPersons((persons: any[]) =>
@@ -85,8 +82,8 @@ function CheckCalculation() {
               <AddPerson 
               persons={persons} 
               removePerson={removePerson}
-              removeItem={removeItem}
-              setItem={setItem} />
+              setItem={setItem} 
+              setPersons={setPersons} />
             </ul>
         <button onClick={() => addPerson()}> Add Person </button>
         </div>

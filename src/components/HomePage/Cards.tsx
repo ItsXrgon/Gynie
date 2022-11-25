@@ -39,8 +39,8 @@ function Cards() {
                     <CardItem 
                     src = {CardImage}
                     label='Sign in required'
-                    path='/Schedule'
-                    text='Schedule Planner'/>
+                    path='/ArtGallery'
+                    text='Art Gallery'/>
                     <CardItem 
                     src = {CardImage}
                     label='No sign in required'

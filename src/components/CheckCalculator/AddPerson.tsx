@@ -6,21 +6,45 @@ import { ReactComponent as Remove } from '../icons/remove_icon.svg'
 function AddPerson({
     persons,
     removePerson,
-    removeItem,
-    setItem
+    setItem,
+    setPersons
     }:{
     persons: any[],
     removePerson : (index : number) => void,
-    removeItem : (index : number, personIndex: number) => void,
     setItem: (index : number, personIndex: number, itemIndex: number) => void,
+    setPersons: (persons: {name : string; items: number[]; total: number}[]) => void
     }) {
 
     const mappedData = persons.map((person,  i) => {
 
-    function addItem() {
-        let oldArray : number[] = person.items;
-        let newArray : number[] = [...oldArray, 0];
-        // setPerons something to add item to persons array
+    function addItem(index: number) {
+        persons.map((person,  i) => {
+            if(i == index) {
+                let oldArray : number[] = person.items;
+                let newItems : number[] = [...oldArray, 0];
+                let newPersons: {name : string; items: number[]; total: number}[] = persons;
+                newPersons[index].items = newItems;
+                setPersons(newPersons)          
+            }
+        })  
+        setPersons(persons)  
+    }
+
+    
+  function removeItem(itemIndex: number, personIndex: number) {
+        persons.map((person,  i) => {
+            if(i == personIndex) {
+                person.items.map((item: any, j: number) => {
+                    if(j == itemIndex ) {
+                        let newItems = person.items.filter((_item: any, i: any) => i !== j)
+                        let newPersons: {name : string; items: number[]; total: number}[] = persons;
+                        newPersons[personIndex].items = newItems;
+                        setPersons(newPersons) 
+                    }
+                })        
+            }  
+        })  
+        setPersons(persons)  
     }
     
     return (
@@ -34,7 +58,7 @@ function AddPerson({
             <ul className='person-items'>
                 <AddItem person={person} removeItem={removeItem} setItem={setItem} personIndex={i}/>
             </ul>
-            <button onClick={() => addItem()}> Add Item </button>
+            <button onClick={() => addItem(i)}> Add Item </button>
         </li>
     )
     })
