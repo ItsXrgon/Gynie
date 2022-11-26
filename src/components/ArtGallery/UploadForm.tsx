@@ -20,7 +20,7 @@ function UploadForm() {
     return (
         <>
         <form>
-            <input type='file' onChange={changeHandler} accept="image/png, image/jpeg" />
+            <input type='file' onChange={changeHandler} accept="image/png, image/jpg, image/jpeg" />
             <span>+</span>
             <div className='file-output'>
                 { error != "" && <div className='error'> {error} </div> }
